@@ -1,0 +1,29 @@
+
+.moldura {
+    border-image-source: url("../../img/moldura10.png");
+    border-image-slice:61;
+    border-image-repeat: repeat;
+    border-width: 30px;
+    border-style: solid;
+    height: 300px;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+ .certificado {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    box-shadow: -4px 4px 2px rgba(0, 0, 0, 0.3);
+    gap:3;
+
+
+}
