@@ -1,48 +1,52 @@
-let cursos;
-const objCurso = {
-    titulo: "",
-    instituicao: "",
-    data: ""
-}
+
 const parede = document.querySelector(".container-moldura");
 document.addEventListener("DOMContentLoaded", function () {
+    console.clear()
     console.log("DOM fully loaded and parsed");
-    getCertificados();
+     getCertificados("./data/list.json","molduras")
+     getCertificados("./data/list.json","Curso em Video")
+     getCertificados("./data/list.json","Proa")
 });
 
-async function getCertificados() {
+
+function getCertificados(banco,tabela) {
     try {
-        const dados = fetch("../data/list.json")
-            .then(response => response.json())
+
+        fetch(banco)
+            .then((response) => response.json())
             .then(data => {
-                cursos = data.moldura;
-
-
+                console.log(data[tabela])
+                carregarCertificados(data[tabela])
             })
-            .catch(error => console.error(error));
 
 
+    } catch (error) {
+        console.error(error)
     }
-    catch (error) {
-        console.log(error)
-    }
+
 }
-function carregarCertificados() {
+   
+
+function carregarCertificados(cursos) {
     console.log(cursos)
     const data = cursos.map((curso) => {
         console.log(curso)
-        const moldura = document.createElement("div");
+        const moldura = document.createElement("div")
+        const certificado = document.createElement("div");
         moldura.classList.add("col")
         moldura.classList.add("moldura")
-        moldura.innerHTML = `
-   <div class="certificado">
-                    <h4>${curso.titulo}</h4>
-                    <p class="instituicao">${curso.instituicao}</p>
-                    <p class="data">${curso.data}</p>
-                </div>
-`
+        certificado.classList.add("certificado")
+        certificado.style.backgroundImage = `url(${curso.img})`
+        certificado.innerHTML = `
+        
+        <h4>${curso.titulo}</h4>
+        <p class="instituicao">${curso.instituicao}</p>
+        <p class="data">${curso.data}</p>
+        
+        `
+        moldura.append(certificado)
         parede.append(moldura);
-        console.log(data)
-    });
+        
+})
 }
 
