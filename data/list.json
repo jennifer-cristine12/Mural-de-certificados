@@ -2,6 +2,23 @@
   
   "Curso em Video":[
     {
+      "id": 1,
+      "titulo": "",
+      "instituicao": "",
+      "data": "",
+      "img":"./assets/img/dataImg/curso-em-video/html-css/Certificado-html-e-css-modulo-1.jpg",
+      "link": "https://www.cursoemvideo.com/"
+    },
+    {
+      "id": 2,
+      "titulo": "",
+      "instituicao": "",
+      "data": "",
+      "img":"./assets/img/dataImg/curso-em-video/html-css/Certificado-html-e-css-modulo-2.jpg",
+      "link": "https://www.cursoemvideo.com/"
+      
+    },
+    {
       "id": 3,
       "titulo": "",
       "instituicao": "",
@@ -23,7 +40,16 @@
       "titulo": "",
       "instituicao": "",
       "data": "",
-      "img":"./assets/img/dataImg/curso-em-video/html-css/Certificado-php.jpg",
+      "img":"./assets/img/dataImg/curso-em-video/php/Certificado-php.jpg",
+      "link": "https://www.cursoemvideo.com/"
+      
+    },
+    {
+      "id": 7,
+      "titulo": "",
+      "instituicao": "",
+      "data": "",
+      "img":"./assets/img/dataImg/curso-em-video/java/Certificado-Java-Poo.jpg",
       "link": "https://www.cursoemvideo.com/"
       
     }
